@@ -17,16 +17,13 @@ export const SITE = {
   serviceArea: "Antique & Aklan",
 } as const;
 
-// Photo gallery — drop image files into /public/gallery/ and update the `src` here.
-// If `src` is empty (""), a styled placeholder shows with the label, so you can
-// see exactly where each photo will go before you have them.
 export const GALLERY: { src: string; label: string }[] = [
-  { src: "", label: "Clean fade" },
-  { src: "", label: "Low taper" },
-  { src: "", label: "Design — letter" },
-  { src: "", label: "Kid's cut" },
-  { src: "", label: "Skin fade" },
-  { src: "", label: "Freestyle design" },
+  { src: "/gallery/cut1-cool-design.webp", label: "Custom design" },
+  { src: "/gallery/cut2.webp", label: "Clean fade" },
+  { src: "/gallery/cut3.webp", label: "Sharp taper" },
+  { src: "/gallery/cut4-heartdesign.webp", label: "Heart design" },
+  { src: "/gallery/cut5-cleancut.webp", label: "Clean cut" },
+  { src: "/gallery/cut6-cleancut.webp", label: "Fresh finish" },
 ];
 
 export const SERVICES = [
