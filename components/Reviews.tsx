@@ -68,12 +68,10 @@ export default function Reviews() {
               </ul>
 
               <a
-                href={SITE.bookingUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#book"
                 className="mt-6 flex w-full items-center justify-center gap-2 rounded-sm border border-brown/20 bg-cream-light px-5 py-3 text-sm font-medium text-brown transition hover:border-brown hover:bg-cream"
               >
-                See all reviews
+                Book a cut
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden>
                   <path
                     d="M3 8h10m0 0L8.5 3.5M13 8l-4.5 4.5"

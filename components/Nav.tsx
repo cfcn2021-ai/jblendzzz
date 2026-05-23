@@ -43,9 +43,7 @@ export default function Nav() {
           ))}
           <li>
             <a
-              href={SITE.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#book"
               className="rounded-sm bg-brown px-5 py-2.5 text-sm font-medium tracking-wide text-cream transition hover:bg-brown-light"
             >
               Book
@@ -83,9 +81,7 @@ export default function Nav() {
             ))}
             <li className="pt-2">
               <a
-                href={SITE.bookingUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#book"
                 onClick={() => setOpen(false)}
                 className="block rounded-sm bg-brown px-5 py-3 text-center text-sm font-medium text-cream"
               >

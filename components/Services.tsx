@@ -45,9 +45,7 @@ export default function Services() {
 
         <div className="mt-16 text-center">
           <a
-            href={SITE.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#book"
             className="inline-flex items-center justify-center rounded-sm bg-brown px-8 py-4 text-sm font-medium tracking-[0.15em] text-cream transition hover:bg-brown-light"
           >
             BOOK AN APPOINTMENT

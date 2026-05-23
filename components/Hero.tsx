@@ -32,9 +32,7 @@ export default function Hero() {
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <a
-              href={SITE.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#book"
               className="inline-flex items-center justify-center gap-2 rounded-sm bg-cream px-8 py-4 text-sm font-medium tracking-[0.15em] text-brown transition hover:bg-cream-light"
             >
               BOOK A CUT
