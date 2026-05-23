@@ -1,0 +1,102 @@
+"use client";
+
+import { useState } from "react";
+import { SITE } from "@/lib/site";
+
+const LINKS = [
+  { href: "#services", label: "Services" },
+  { href: "#why", label: "Why Me" },
+  { href: "#gallery", label: "Gallery" },
+  { href: "#reviews", label: "Reviews" },
+  { href: "#contact", label: "Contact" },
+];
+
+export default function Nav() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <header className="sticky top-0 z-40 border-b border-zinc-900 bg-zinc-950/80 backdrop-blur-md">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8">
+        <a href="#top" className="flex items-center gap-2 group">
+          <div className="grid h-9 w-9 place-items-center rounded-full border border-gold/40 bg-zinc-900 font-display text-xl text-gold leading-none transition group-hover:border-gold">
+            J
+          </div>
+          <span className="font-display text-2xl tracking-wider text-white">
+            {SITE.name}
+          </span>
+        </a>
+
+        <ul className="hidden items-center gap-8 md:flex">
+          {LINKS.map((l) => (
+            <li key={l.href}>
+              <a
+                href={l.href}
+                className="text-sm font-medium text-zinc-300 transition hover:text-gold"
+              >
+                {l.label}
+              </a>
+            </li>
+          ))}
+          <li>
+            <a
+              href={SITE.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-zinc-950 transition hover:bg-gold-light"
+            >
+              Book Now
+            </a>
+          </li>
+        </ul>
+
+        <button
+          aria-label="Toggle menu"
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+          className="grid h-10 w-10 place-items-center rounded-md border border-zinc-800 md:hidden"
+        >
+          <div className="space-y-1.5">
+            <span
+              className={`block h-0.5 w-5 bg-zinc-100 transition ${open ? "translate-y-2 rotate-45" : ""}`}
+            />
+            <span
+              className={`block h-0.5 w-5 bg-zinc-100 transition ${open ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`block h-0.5 w-5 bg-zinc-100 transition ${open ? "-translate-y-2 -rotate-45" : ""}`}
+            />
+          </div>
+        </button>
+      </nav>
+
+      {open && (
+        <div className="border-t border-zinc-900 bg-zinc-950 md:hidden">
+          <ul className="mx-auto flex max-w-6xl flex-col px-5 py-4">
+            {LINKS.map((l) => (
+              <li key={l.href}>
+                <a
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  className="block py-3 text-base text-zinc-200 hover:text-gold"
+                >
+                  {l.label}
+                </a>
+              </li>
+            ))}
+            <li className="pt-2">
+              <a
+                href={SITE.bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+                className="block rounded-full bg-gold px-5 py-3 text-center text-sm font-semibold text-zinc-950"
+              >
+                Book Now
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
+    </header>
+  );
+}

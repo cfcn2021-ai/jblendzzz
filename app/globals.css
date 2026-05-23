@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-gold: #d4a35c;
+  --color-gold-light: #e6c285;
+  --color-gold-dark: #b88848;
+
+  --font-display: var(--font-bebas);
+  --font-sans: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #000;
+}
+
+body {
+  background: #0a0a0a;
+  color: #fafafa;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle grid texture for hero */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(212, 163, 92, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 163, 92, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Gold gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #e6c285 0%, #d4a35c 50%, #b88848 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
