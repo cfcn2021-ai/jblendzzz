@@ -1,38 +1,38 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-gold: #d4a35c;
-  --color-gold-light: #e6c285;
-  --color-gold-dark: #b88848;
+  --color-cream: #f5efe6;
+  --color-cream-light: #faf6ef;
+  --color-paper: #ece4d4;
 
-  --font-display: var(--font-bebas);
+  --color-brown: #3a2418;
+  --color-brown-light: #5a3e2e;
+  --color-brown-muted: #8b7361;
+
+  --color-gold: #b88848;
+  --color-gold-light: #d4a35c;
+  --color-gold-dark: #9a6f37;
+
+  --font-display: var(--font-playfair);
   --font-sans: var(--font-inter);
 }
 
 html {
   scroll-behavior: smooth;
-  background: #000;
+  background: #f5efe6;
 }
 
 body {
-  background: #0a0a0a;
-  color: #fafafa;
+  background: #f5efe6;
+  color: #3a2418;
   font-family: var(--font-inter), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Subtle grid texture for hero */
-.bg-grid {
-  background-image:
-    linear-gradient(rgba(212, 163, 92, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(212, 163, 92, 0.04) 1px, transparent 1px);
-  background-size: 48px 48px;
-}
-
-/* Gold gradient text */
-.text-gold-gradient {
-  background: linear-gradient(135deg, #e6c285 0%, #d4a35c 50%, #b88848 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+/* Dotted leader for the price list — sits between name and price */
+.dotted-leader {
+  flex: 1 1 0%;
+  align-self: end;
+  margin: 0 0.6rem 0.55em;
+  border-bottom: 2px dotted rgba(58, 36, 24, 0.28);
 }

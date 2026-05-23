@@ -2,6 +2,7 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import WhyChoose from "@/components/WhyChoose";
+import OurStory from "@/components/OurStory";
 import Gallery from "@/components/Gallery";
 import Reviews from "@/components/Reviews";
 import Booking from "@/components/Booking";
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <Services />
         <WhyChoose />
+        <OurStory />
         <Gallery />
         <Reviews />
         <Booking />

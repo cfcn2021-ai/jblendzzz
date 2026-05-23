@@ -2,90 +2,61 @@ import { SERVICES, SITE } from "@/lib/site";
 
 export default function Services() {
   return (
-    <section id="services" className="bg-zinc-950 py-20 lg:py-28">
-      <div className="mx-auto max-w-6xl px-5 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-medium tracking-widest text-gold uppercase">
-            What I offer
+    <section id="services" className="bg-cream py-24 lg:py-32">
+      <div className="mx-auto max-w-3xl px-5 lg:px-8">
+        <div className="text-center">
+          <p className="text-xs font-medium tracking-[0.3em] text-brown/60 uppercase">
+            Services
           </p>
-          <h2 className="mt-3 font-display text-5xl tracking-tight text-white sm:text-6xl">
-            Services & Prices
+          <h2 className="mt-4 font-display text-5xl font-normal tracking-tight text-brown sm:text-6xl">
+            The price list
           </h2>
-          <p className="mt-4 text-zinc-400">
+          <p className="mx-auto mt-5 max-w-md text-brown/70">
             Transparent pricing. No surprises. Travel fees may apply outside Pandan.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <ul className="mt-16 space-y-10">
           {SERVICES.map((s) => (
-            <article
-              key={s.id}
-              className="group relative flex flex-col overflow-hidden rounded-2xl border border-zinc-800 bg-gradient-to-b from-zinc-900 to-zinc-950 p-7 transition hover:border-gold/50"
-            >
-              {s.badge && (
-                <span className="absolute right-5 top-5 rounded-full border border-gold/40 bg-gold/10 px-3 py-1 text-xs font-medium text-gold">
-                  {s.badge}
+            <li key={s.id}>
+              <div className="flex items-end">
+                <h3 className="font-display text-3xl font-normal text-brown sm:text-4xl">
+                  {s.name}
+                </h3>
+                <span className="dotted-leader" aria-hidden />
+                <span className="font-display text-3xl font-normal text-brown sm:text-4xl">
+                  {s.price}
                 </span>
+              </div>
+              <div className="mt-3 flex items-baseline justify-between gap-4">
+                <p className="italic text-brown/70">{s.description}</p>
+                <p className="shrink-0 whitespace-nowrap text-sm text-brown-muted">
+                  {s.duration}
+                </p>
+              </div>
+              {s.badge && (
+                <p className="mt-2 text-xs uppercase tracking-[0.2em] text-gold">
+                  · {s.badge}
+                </p>
               )}
-
-              <div className="mb-6 grid h-14 w-14 place-items-center rounded-xl border border-zinc-800 bg-zinc-900">
-                <ServiceIcon id={s.id} />
-              </div>
-
-              <h3 className="font-display text-3xl tracking-wide text-white">
-                {s.name}
-              </h3>
-              <p className="mt-2 text-sm text-zinc-400">{s.description}</p>
-
-              <div className="mt-6 flex items-end justify-between border-t border-zinc-800 pt-5">
-                <div>
-                  <div className="text-3xl font-bold text-white">{s.price}</div>
-                  <div className="text-xs text-zinc-500">{s.duration}</div>
-                </div>
-                <a
-                  href={SITE.bookingUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full bg-zinc-100 px-4 py-2 text-sm font-semibold text-zinc-950 transition group-hover:bg-gold"
-                >
-                  Book
-                </a>
-              </div>
-            </article>
+            </li>
           ))}
-        </div>
+        </ul>
 
-        <p className="mt-8 text-center text-xs text-zinc-500">
-          Travel fee: Pandan free · within 10 km +₱50 · 10–20 km +₱100. Ask for further locations.
-        </p>
+        <div className="mt-16 text-center">
+          <a
+            href={SITE.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-sm bg-brown px-8 py-4 text-sm font-medium tracking-[0.15em] text-cream transition hover:bg-brown-light"
+          >
+            BOOK AN APPOINTMENT
+          </a>
+          <p className="mt-6 text-xs text-brown/60">
+            Travel fee: Pandan free · within 10 km +₱50 · 10–20 km +₱100. Ask for further locations.
+          </p>
+        </div>
       </div>
     </section>
-  );
-}
-
-function ServiceIcon({ id }: { id: string }) {
-  if (id === "kids") {
-    return (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-gold">
-        <circle cx="12" cy="8" r="4" stroke="currentColor" strokeWidth="2" />
-        <path d="M5 21c0-3.866 3.134-7 7-7s7 3.134 7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        <circle cx="10" cy="8" r="0.7" fill="currentColor" />
-        <circle cx="14" cy="8" r="0.7" fill="currentColor" />
-      </svg>
-    );
-  }
-  if (id === "design") {
-    return (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-gold">
-        <path d="M3 17l6-6 4 4 8-8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M17 7h4v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-    );
-  }
-  return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-gold">
-      <path d="M6 4l4 6m8-6l-4 6M6 20a3 3 0 100-6 3 3 0 000 6zm12 0a3 3 0 100-6 3 3 0 000 6z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d="M9 13l3-3 3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-    </svg>
   );
 }

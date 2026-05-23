@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Inter } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 
-const bebas = Bebas_Neue({
-  weight: "400",
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-bebas",
+  variable: "--font-playfair",
   display: "swap",
 });
 
@@ -31,7 +30,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${bebas.variable} ${inter.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <body className="min-h-screen">{children}</body>
     </html>
   );

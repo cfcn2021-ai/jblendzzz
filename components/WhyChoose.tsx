@@ -41,36 +41,35 @@ const POINTS = [
 
 export default function WhyChoose() {
   return (
-    <section id="why" className="relative bg-black py-20 lg:py-28">
+    <section id="why" className="bg-cream py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="grid gap-14 lg:grid-cols-12 lg:gap-20">
           <div className="lg:col-span-5">
-            <p className="text-xs font-medium tracking-widest text-gold uppercase">
-              Why book Jblendzzz
+            <p className="text-xs font-medium tracking-[0.3em] text-brown/60 uppercase">
+              Why Jblendzzz
             </p>
-            <h2 className="mt-3 font-display text-5xl tracking-tight text-white sm:text-6xl">
+            <h2 className="mt-4 font-display text-5xl font-normal leading-[1.1] tracking-tight text-brown sm:text-6xl">
               Barbering, the way it should be.
             </h2>
-            <p className="mt-5 text-lg text-zinc-400">
-              You shouldn't have to wait in line, fight traffic, or argue with a
-              schedule just to look fresh. I built Jblendzzz so a great cut
-              comes to you — wherever &ldquo;you&rdquo; is.
+            <p className="mt-6 text-lg leading-relaxed text-brown/75">
+              You shouldn&apos;t have to wait in line, fight traffic, or argue with
+              a schedule just to look fresh. I built Jblendzzz so a great cut
+              comes to you — wherever you happen to be.
             </p>
           </div>
 
-          <ul className="lg:col-span-7 grid gap-6 sm:grid-cols-2">
+          <ul className="lg:col-span-7 grid gap-8 sm:grid-cols-2">
             {POINTS.map((p) => (
-              <li
-                key={p.title}
-                className="rounded-2xl border border-zinc-900 bg-zinc-950 p-6 transition hover:border-zinc-800"
-              >
-                <div className="mb-4 grid h-11 w-11 place-items-center rounded-lg border border-zinc-800 bg-zinc-900 text-gold">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <li key={p.title} className="border-t border-brown/15 pt-6">
+                <div className="mb-4 text-brown">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     {p.icon}
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold text-white">{p.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                <h3 className="font-display text-2xl font-normal text-brown">
+                  {p.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-brown/70">
                   {p.body}
                 </p>
               </li>

@@ -47,42 +47,42 @@ const ITEMS = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-zinc-950 py-20 lg:py-28">
+    <section id="contact" className="bg-cream py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-medium tracking-widest text-gold uppercase">
+          <p className="text-xs font-medium tracking-[0.3em] text-brown/60 uppercase">
             Get in touch
           </p>
-          <h2 className="mt-3 font-display text-5xl tracking-tight text-white sm:text-6xl">
+          <h2 className="mt-4 font-display text-5xl font-normal tracking-tight text-brown sm:text-6xl">
             Contact
           </h2>
-          <p className="mt-4 text-zinc-400">
+          <p className="mt-4 text-brown/70">
             Questions, custom requests, or group bookings — reach out any time.
           </p>
         </div>
 
-        <ul className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {ITEMS.map((it) => {
             const inner = (
               <>
-                <div className="mb-4 grid h-11 w-11 place-items-center rounded-lg border border-zinc-800 bg-zinc-900 text-gold">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <div className="mb-4 text-brown">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     {it.icon}
                   </svg>
                 </div>
-                <p className="text-xs font-medium uppercase tracking-wider text-zinc-500">
+                <p className="text-xs font-medium uppercase tracking-[0.2em] text-brown/50">
                   {it.label}
                 </p>
-                <p className="mt-1 font-medium text-white">{it.value}</p>
+                <p className="mt-1 font-medium text-brown">{it.value}</p>
                 {it.sub && (
-                  <p className="text-sm text-zinc-500">{it.sub}</p>
+                  <p className="text-sm text-brown/50">{it.sub}</p>
                 )}
               </>
             );
             return (
               <li
                 key={it.label}
-                className="rounded-2xl border border-zinc-900 bg-black/40 p-6 transition hover:border-zinc-800"
+                className="border-t border-brown/15 pt-6"
               >
                 {it.href ? (
                   <a href={it.href} className="block">
