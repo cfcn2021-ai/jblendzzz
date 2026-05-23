@@ -6,8 +6,12 @@ export default function Footer() {
     <footer className="border-t border-brown/15 bg-cream-light py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 sm:flex-row lg:px-8">
         <div className="flex items-center gap-3">
-          <div className="grid h-8 w-8 place-items-center rounded-full border border-brown/30 bg-cream font-display text-lg text-brown leading-none">
-            J
+          <div className="h-8 w-8 overflow-hidden rounded-full border border-brown/30">
+            <img
+              src="/gallery/profile.webp"
+              alt=""
+              className="h-full w-full object-cover"
+            />
           </div>
           <span className="font-display text-lg tracking-wide text-brown">
             {SITE.name}

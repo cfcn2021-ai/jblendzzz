@@ -18,8 +18,12 @@ export default function Nav() {
     <header className="sticky top-0 z-40 border-b border-brown/10 bg-cream/85 backdrop-blur-md">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8">
         <a href="#top" className="flex items-center gap-3 group">
-          <div className="grid h-9 w-9 place-items-center rounded-full border border-brown/30 bg-cream font-display text-xl text-brown leading-none transition group-hover:border-brown">
-            J
+          <div className="h-9 w-9 overflow-hidden rounded-full border border-brown/30 transition group-hover:border-brown">
+            <img
+              src="/gallery/profile.webp"
+              alt=""
+              className="h-full w-full object-cover"
+            />
           </div>
           <span className="font-display text-xl tracking-wide text-brown">
             {SITE.name}
