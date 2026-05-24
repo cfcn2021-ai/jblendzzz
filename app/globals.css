@@ -27,7 +27,7 @@
   --color-gold-light: #e6cf9c;
   --color-gold-dark: #a07f55;
 
-  --font-display: var(--font-playfair);
+  --font-display: var(--font-anton);
   --font-sans: var(--font-inter);
 }
 
@@ -40,7 +40,7 @@ body {
   background: #0d0b09;
   color: #f1e9d8;
   font-family: var(--font-inter), system-ui, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
