@@ -6,10 +6,10 @@
   --color-ink-soft: #14110d;
   --color-ink-raised: #1b1814;
 
-  /* Ivory family — slightly warm so it never feels clinical */
-  --color-ivory: #f1e9d8;
-  --color-ivory-soft: #e8dfca;
-  --color-ivory-mute: #b8ad95;
+  /* Ivory family — muted/warm-gray primary for moodier reading on dark ink */
+  --color-ivory: #b8ad95;
+  --color-ivory-soft: #a89e87;
+  --color-ivory-mute: #8a7e66;
 
   /* Champagne accent — refined, not orange */
   --color-champagne: #c9a578;
@@ -17,7 +17,7 @@
   --color-champagne-deep: #a07f55;
 
   /* Legacy tokens kept as aliases so any stray className still resolves */
-  --color-cream: #f1e9d8;
+  --color-cream: #b8ad95;
   --color-cream-light: #14110d;
   --color-paper: #1b1814;
   --color-brown: #0d0b09;
@@ -38,7 +38,7 @@ html {
 
 body {
   background: #0d0b09;
-  color: #f1e9d8;
+  color: #b8ad95;
   font-family: var(--font-inter), system-ui, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
