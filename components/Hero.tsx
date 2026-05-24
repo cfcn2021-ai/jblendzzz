@@ -5,7 +5,7 @@ export default function Hero() {
     <section id="top" className="relative isolate overflow-hidden bg-ink">
       <div className="absolute inset-0 -z-10">
         <img
-          src="/gallery/front-page.webp"
+          src="/gallery/front-page.jpg"
           alt="Sharp cut by Jblendzzz"
           className="h-full w-full object-cover opacity-70"
         />
