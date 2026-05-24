@@ -11,10 +11,10 @@
   --color-ivory-soft: #a89e87;
   --color-ivory-mute: #8a7e66;
 
-  /* Champagne accent — refined, not orange */
-  --color-champagne: #c9a578;
-  --color-champagne-light: #e6cf9c;
-  --color-champagne-deep: #a07f55;
+  /* Muted bronze accent — desaturated to live in the same moody family as the gray text */
+  --color-champagne: #b08868;
+  --color-champagne-light: #c9a078;
+  --color-champagne-deep: #8a6850;
 
   /* Legacy tokens kept as aliases so any stray className still resolves */
   --color-cream: #b8ad95;
@@ -23,9 +23,9 @@
   --color-brown: #0d0b09;
   --color-brown-light: #1b1814;
   --color-brown-muted: #8a7e66;
-  --color-gold: #c9a578;
-  --color-gold-light: #e6cf9c;
-  --color-gold-dark: #a07f55;
+  --color-gold: #b08868;
+  --color-gold-light: #c9a078;
+  --color-gold-dark: #8a6850;
 
   --font-display: var(--font-anton);
   --font-sans: var(--font-inter);
