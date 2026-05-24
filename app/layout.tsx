@@ -31,7 +31,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
-      <body className="min-h-screen">{children}</body>
+      <body className="min-h-screen bg-ink text-ivory">{children}</body>
     </html>
   );
 }

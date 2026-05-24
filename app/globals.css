@@ -1,17 +1,31 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-cream: #f5efe6;
-  --color-cream-light: #faf6ef;
-  --color-paper: #ece4d4;
+  /* Surfaces — deep, expensive, restrained */
+  --color-ink: #0d0b09;
+  --color-ink-soft: #14110d;
+  --color-ink-raised: #1b1814;
 
-  --color-brown: #3a2418;
-  --color-brown-light: #5a3e2e;
-  --color-brown-muted: #8b7361;
+  /* Ivory family — slightly warm so it never feels clinical */
+  --color-ivory: #f1e9d8;
+  --color-ivory-soft: #e8dfca;
+  --color-ivory-mute: #b8ad95;
 
-  --color-gold: #b88848;
-  --color-gold-light: #d4a35c;
-  --color-gold-dark: #9a6f37;
+  /* Champagne accent — refined, not orange */
+  --color-champagne: #c9a578;
+  --color-champagne-light: #e6cf9c;
+  --color-champagne-deep: #a07f55;
+
+  /* Legacy tokens kept as aliases so any stray className still resolves */
+  --color-cream: #f1e9d8;
+  --color-cream-light: #14110d;
+  --color-paper: #1b1814;
+  --color-brown: #0d0b09;
+  --color-brown-light: #1b1814;
+  --color-brown-muted: #8a7e66;
+  --color-gold: #c9a578;
+  --color-gold-light: #e6cf9c;
+  --color-gold-dark: #a07f55;
 
   --font-display: var(--font-playfair);
   --font-sans: var(--font-inter);
@@ -19,20 +33,38 @@
 
 html {
   scroll-behavior: smooth;
-  background: #f5efe6;
+  background: #0d0b09;
 }
 
 body {
-  background: #f5efe6;
-  color: #3a2418;
+  background: #0d0b09;
+  color: #f1e9d8;
   font-family: var(--font-inter), system-ui, sans-serif;
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-/* Dotted leader for the price list — sits between name and price */
+/* Hairline divider for the menu — a single ivory line with a champagne dot mid-rule */
 .dotted-leader {
   flex: 1 1 0%;
   align-self: end;
-  margin: 0 0.6rem 0.55em;
-  border-bottom: 2px dotted rgba(58, 36, 24, 0.28);
+  margin: 0 0.9rem 0.7em;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(241, 233, 216, 0.18) 0%,
+    rgba(241, 233, 216, 0.28) 50%,
+    rgba(241, 233, 216, 0.18) 100%
+  );
+}
+
+/* A small reusable champagne hairline used under kicker labels */
+.gilt-rule {
+  display: inline-block;
+  width: 1.75rem;
+  height: 1px;
+  background: var(--color-champagne);
+  vertical-align: middle;
+  margin-right: 0.75rem;
 }
